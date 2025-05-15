@@ -5,3 +5,23 @@
   --color-salmon: #D3765A;
   --color-sand: #F6F0E5;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-sand);
+}
