@@ -15,7 +15,7 @@ export function Header () {
             <Link href="/">Home</Link>
             <Link href="/#about">About</Link>
             <Link href="/#contact">Contact</Link>
-            <button className="bg-salmon text-white px-5 py-2 rounded-2xl font-semibold text-lg">
+            <button className="bg-salmon text-white px-5 py-2  rounded-2xl font-semibold text-lg">
               Login
             </button>
           </nav>
