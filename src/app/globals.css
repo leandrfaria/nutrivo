@@ -1,10 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-forest: #1C3B2A;
+  --color-forest: #355C45;
   --color-salmon: #D3765A;
   --color-sand: #F6F0E5;
 }
+
+@layer utilities {
+  .text-forest {
+    color: var(--color-forest);
+  }
+
+  .text-salmon {
+    color: var(--color-salmon);
+  }
+
+  .text-sand {
+    color: var(--color-sand);
+  }
+}
+
 
 * {
   margin: 0;
