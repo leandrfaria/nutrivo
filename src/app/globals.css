@@ -4,6 +4,7 @@
   --color-forest: #355C45;
   --color-salmon: #D3765A;
   --color-sand: #F6F0E5;
+  --color-darksand: #e8dfce;
 }
 
 @layer utilities {
@@ -17,6 +18,10 @@
 
   .text-sand {
     color: var(--color-sand);
+  }
+
+  .text-darksand {
+    color: var(--color-darksand);
   }
 }
 
