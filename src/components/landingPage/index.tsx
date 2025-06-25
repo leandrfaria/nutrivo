@@ -1,23 +1,25 @@
-import { FiArrowUpRight, FiHeart, FiCalendar } from "react-icons/fi";
+'use client'
+
+import Image from 'next/image'
+import Link from 'next/link'
+import { FiArrowUpRight, FiHeart, FiCalendar } from 'react-icons/fi'
 import {
   BiDollarCircle,
   BiLogoInstagram,
   BiLogoGmail,
   BiPhone,
   BiLocationPlus,
-} from "react-icons/bi";
-
-import Link from "next/link";
+} from 'react-icons/bi'
 
 export function LandingPage() {
   return (
     <>
-      {/* HERO SECTION */}
+
       <section
         id="container"
         className="max-w-7xl mx-auto w-full flex flex-col-reverse lg:flex-row items-center justify-center gap-y-14 lg:gap-x-16 px-6 sm:px-10 py-16 mb-14 text-center lg:text-start"
       >
-        {/* TEXT */}
+
         <div id="text" className="text-forest max-w-lg">
           <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
             Get Personalized <br />
@@ -35,17 +37,19 @@ export function LandingPage() {
           </Link>
         </div>
 
-        {/* IMAGE */}
+
         <div id="image" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[460px]">
-          <img
+          <Image
             src="/assets/img/comida2.png"
             alt="Imagem cartoon de comida"
+            width={460}
+            height={460}
             className="w-full h-auto object-contain"
           />
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
+
       <section className="bg-darksand text-forest">
         <div id="about" className="max-w-7xl mx-auto px-6 sm:px-8 py-20">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-16">
@@ -56,23 +60,23 @@ export function LandingPage() {
             {[
               {
                 icon: <FiArrowUpRight />,
-                title: "Set Your Objective",
-                desc: "Choose your desired outcome, such as weight loss, muscle gain, or improved health.",
+                title: 'Set Your Objective',
+                desc: 'Choose your desired outcome, such as weight loss, muscle gain, or improved health.',
               },
               {
                 icon: <FiHeart />,
-                title: "Food Preferences",
-                desc: "Tell us what you like to eat and any dietary restrictions.",
+                title: 'Food Preferences',
+                desc: 'Tell us what you like to eat and any dietary restrictions.',
               },
               {
                 icon: <FiCalendar />,
-                title: "Daily Schedule",
-                desc: "Provide your mealtime availability and routine.",
+                title: 'Daily Schedule',
+                desc: 'Provide your mealtime availability and routine.',
               },
               {
                 icon: <BiDollarCircle />,
-                title: "Budget-Friendly",
-                desc: "Plans are created to match your financial budget.",
+                title: 'Budget-Friendly',
+                desc: 'Plans are created to match your financial budget.',
               },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-5 w-full max-w-md">
@@ -87,47 +91,42 @@ export function LandingPage() {
         </div>
       </section>
 
-      <section
-  className="max-w-7xl mx-auto px-6 sm:px-8 py-20 text-center text-forest"
-  id="contact"
->
-  <h2 className="text-3xl sm:text-4xl font-bold mb-4">Contact Us</h2>
-  <p className="text-base max-w-2xl mx-auto mb-12 text-gray-700">
-    We'd love to hear from you. Feel free to reach out through any of the
-    channels below.
-  </p>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-    {/* Email */}
-    <div className="bg-white rounded-2xl px-6 py-8 shadow-md flex flex-col items-center text-center gap-3">
-      <BiLogoGmail className="text-4xl text-forest mb-2" />
-      <h3 className="text-lg font-semibold text-forest">Email</h3>
-      <p className="text-gray-600 text-sm">nutrivo@gmail.com</p>
-    </div>
+      <section className="max-w-7xl mx-auto px-6 sm:px-8 py-20 text-center text-forest" id="contact">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Contact Us</h2>
+        <p className="text-base max-w-2xl mx-auto mb-12 text-gray-700">
+          We'd love to hear from you. Feel free to reach out through any of the
+          channels below.
+        </p>
 
-    {/* Phone */}
-    <div className="bg-white rounded-2xl px-6 py-8 shadow-md flex flex-col items-center text-center gap-3">
-      <BiPhone className="text-4xl text-forest mb-2" />
-      <h3 className="text-lg font-semibold text-forest">Phone</h3>
-      <p className="text-gray-600 text-sm">+55 41986782114</p>
-    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
 
-    {/* Instagram */}
-    <div className="bg-white rounded-2xl px-6 py-8 shadow-md flex flex-col items-center text-center gap-3">
-      <BiLogoInstagram className="text-4xl text-forest mb-2" />
-      <h3 className="text-lg font-semibold text-forest">Instagram</h3>
-      <p className="text-gray-600 text-sm">@nutrivo</p>
-    </div>
+          <div className="bg-white rounded-2xl px-6 py-8 shadow-md flex flex-col items-center text-center gap-3">
+            <BiLogoGmail className="text-4xl text-forest mb-2" />
+            <h3 className="text-lg font-semibold text-forest">Email</h3>
+            <p className="text-gray-600 text-sm">nutrivo@gmail.com</p>
+          </div>
 
-    {/* Location */}
-    <div className="bg-white rounded-2xl px-6 py-8 shadow-md flex flex-col items-center text-center gap-3">
-      <BiLocationPlus className="text-4xl text-forest mb-2" />
-      <h3 className="text-lg font-semibold text-forest">Location</h3>
-      <p className="text-gray-600 text-sm">Curitiba, Paraná</p>
-    </div>
-  </div>
-</section>
 
+          <div className="bg-white rounded-2xl px-6 py-8 shadow-md flex flex-col items-center text-center gap-3">
+            <BiPhone className="text-4xl text-forest mb-2" />
+            <h3 className="text-lg font-semibold text-forest">Phone</h3>
+            <p className="text-gray-600 text-sm">+55 41986782114</p>
+          </div>
+
+          <div className="bg-white rounded-2xl px-6 py-8 shadow-md flex flex-col items-center text-center gap-3">
+            <BiLogoInstagram className="text-4xl text-forest mb-2" />
+            <h3 className="text-lg font-semibold text-forest">Instagram</h3>
+            <p className="text-gray-600 text-sm">@nutrivo</p>
+          </div>
+
+          <div className="bg-white rounded-2xl px-6 py-8 shadow-md flex flex-col items-center text-center gap-3">
+            <BiLocationPlus className="text-4xl text-forest mb-2" />
+            <h3 className="text-lg font-semibold text-forest">Location</h3>
+            <p className="text-gray-600 text-sm">Curitiba, Paraná</p>
+          </div>
+        </div>
+      </section>
     </>
-  );
+  )
 }

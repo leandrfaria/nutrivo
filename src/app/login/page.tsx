@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
+import Image from "next/image"; 
 
 export default function Login() {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -11,20 +12,23 @@ export default function Login() {
     <section className="flex items-center justify-center bg-sand min-h-[90vh] pt-6 sm:pt-10 px-4 sm:px-6">
       <div className="bg-white border border-[#e5dccb] rounded-2xl shadow-xl w-full max-w-3xl flex flex-col md:flex-row overflow-hidden">
 
-        {/* Imagem lateral (visível apenas em telas md ou maiores) */}
+
         <div className="hidden md:flex w-full md:w-1/2 items-center justify-center bg-sand p-8">
-          <img
+          <Image
             src="/assets/img/login.png"
             alt="Imagem cartoon de comida"
+            width={400}
+            height={400}
             className="w-[90%] h-auto object-contain"
+            priority
           />
         </div>
 
-        {/* Formulário */}
+
         <div className="w-full md:w-1/2 flex items-center justify-center p-6 sm:p-8">
           <div className="flex flex-col items-center w-full max-w-[280px] sm:max-w-sm gap-6">
 
-            {/* Botões com fundo animado */}
+
             <div className="relative w-full flex border border-[#e0c6a8] rounded-full overflow-hidden">
               <div
                 className={clsx(
@@ -52,7 +56,7 @@ export default function Login() {
               </button>
             </div>
 
-            {/* Formulário de login */}
+
             {isSignIn ? (
               <form className="flex flex-col gap-4 w-full">
                 <input
@@ -81,7 +85,7 @@ export default function Login() {
                 </a>
               </form>
             ) : (
-              // Formulário de cadastro
+
               <form className="flex flex-col gap-4 w-full">
                 <input
                   type="text"
